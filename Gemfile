@@ -131,7 +131,7 @@ gem 'terser'
 gem 'typhoeus', '~> 1.4.1'
 gem 'uglifier', '~> 4.2.1'
 gem 'puma'
-gem 'graphviz'
+#gem 'graphviz'
 
 group :development do
   gem 'better_errors'
