@@ -1,17 +1,17 @@
 version: '2'
 
 services:
-  mysqldata:
-    image: mysql:5.7
+  postgresdata:
+    image: postgres:9.5
     command: /bin/true
 
-  mysql:
-    image: mysql:5.7
+  postgres:
+    image: postgres:9.5
     restart: always
     env_file:
-      - ../mysql.env
+      - ../postgres.env
     volumes_from:
-      - mysqldata
+      - postgresdata
 
   web:
     image: ghcr.io/huginn/huginn-single-process
@@ -19,18 +19,18 @@ services:
     ports:
       - "3000:3000"
     env_file:
-      - ../mysql.env
+      - ../postgres.env
       - ../secrets.env
     depends_on:
-      - mysql
+      - postgres
 
   threaded:
     image: ghcr.io/huginn/huginn-single-process
     command: /scripts/init bin/threaded.rb
     restart: always
     env_file:
-      - ../mysql.env
+      - ../postgres.env
       - ../secrets.env
     depends_on:
-      - mysql
+      - postgres
       - web
