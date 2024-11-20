@@ -130,8 +130,6 @@ gem 'sprockets'
 gem 'terser'
 gem 'typhoeus', '~> 1.4.1'
 gem 'uglifier', '~> 4.2.1'
-gem 'puma'
-#gem 'graphviz'
 
 group :development do
   gem 'better_errors'
@@ -160,7 +158,7 @@ group :development do
   group :test do
     gem 'capybara'
     gem 'capybara-select-2', github: 'Hirurg103/capybara_select2', require: false
-    #gem 'puma'
+    gem 'puma'
     gem 'rails-controller-testing'
     gem 'rr', require: false
     gem 'rspec'
