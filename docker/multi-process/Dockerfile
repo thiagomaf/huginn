@@ -39,7 +39,7 @@ ARG OUTDATED_DOCKER_REGISTRY=false
 ENV OUTDATED_DOCKER_REGISTRY=${OUTDATED_DOCKER_REGISTRY}
 
 #RUN APP_SECRET_TOKEN=secret DATABASE_ADAPTER=mysql2 ON_HEROKU=true bundle exec rake assets:clean assets:precompile
-RUN APP_SECRET_TOKEN=secret DATABASE_ADAPTER=postgresql ON_HEROKU=true bundle exec rake assets:clean assets:precompile
+RUN APP_SECRET_TOKEN=secret DATABASE_ADAPTER=postgres ON_HEROKU=true bundle exec rake assets:clean assets:precompile
 
 EXPOSE 3000
 
