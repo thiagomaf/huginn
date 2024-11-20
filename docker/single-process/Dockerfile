@@ -29,7 +29,8 @@ RUN git init && \
     bundle config set --local without 'test development'
 
 #RUN APP_SECRET_TOKEN=secret DATABASE_ADAPTER=mysql2 ON_HEROKU=true bundle install -j 4
-RUN APP_SECRET_TOKEN=secret DATABASE_ADAPTER=postgres ON_HEROKU=true bundle install -j 4
+#RUN APP_SECRET_TOKEN=secret DATABASE_ADAPTER=postgres ON_HEROKU=true bundle install -j 4
+RUN APP_SECRET_TOKEN=secret ON_HEROKU=true bundle install -j 4
 
 COPY --chown="$UID:0" ./ /app/
 
@@ -37,7 +38,8 @@ ARG OUTDATED_DOCKER_REGISTRY=false
 ENV OUTDATED_DOCKER_REGISTRY=${OUTDATED_DOCKER_REGISTRY}
 
 #RUN APP_SECRET_TOKEN=secret DATABASE_ADAPTER=mysql2 ON_HEROKU=true bundle exec rake assets:clean assets:precompile
-RUN APP_SECRET_TOKEN=secret DATABASE_ADAPTER=postgres ON_HEROKU=true bundle exec rake assets:clean assets:precompile
+#RUN APP_SECRET_TOKEN=secret DATABASE_ADAPTER=postgres ON_HEROKU=true bundle exec rake assets:clean assets:precompile
+RUN APP_SECRET_TOKEN=secret ON_HEROKU=true bundle exec rake assets:clean assets:precompile
 
 EXPOSE 3000
 
