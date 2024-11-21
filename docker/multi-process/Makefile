@@ -1,9 +1,2 @@
 build:
-	docker run --rm --name huginn \
-		-p 3000:3000 \
-		-e DATABASE_USERNAME=postgree_uuhx_user \
-		-e DATABASE_PASSWORD="0VquDHnXcxtj6Vbjod8l7KlRgTthujVg" \
-		-e DATABASE_ADAPTER=postgresql \
-		-e DATABASE_HOST=dpg-csssq30gph6c7398nu00-a \
-		-e DATABASE_NAME=postgree_uuhx \
-		huginn/huginn
+	docker build -t ghcr.io/huginn/huginn .

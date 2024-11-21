@@ -39,3 +39,4 @@ production:
   port: <%= ENV['DATABASE_PORT'] || "" %>
   socket: <%= ENV['DATABASE_SOCKET'] || ["/var/run/mysqld/mysqld.sock", "/opt/local/var/run/mysql5/mysqld.sock", "/tmp/mysql.sock"].find{ |path| File.exist? path } %>
   strict: false
+  
