@@ -8,7 +8,7 @@ development:
   password: <%= ENV['DATABASE_PASSWORD'] %>
   host: <%= ENV['DATABASE_HOST'] %>
   port: <%= ENV['DATABASE_PORT'] %>
-  socket: <%= ENV['DATABASE_SOCKET'] %>
+#  socket: <%= ENV['DATABASE_SOCKET'] %>
   strict: false
 
 # Warning: The database defined as "test" will be erased and
