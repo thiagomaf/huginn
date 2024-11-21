@@ -1,7 +1,7 @@
 development:
   adapter: <%= ENV['DATABASE_ADAPTER'] %>
   encoding: <%= ENV['DATABASE_ENCODING'] %>
-  reconnect: <%= ENV['DATABASE_RECONNECT'] %>
+#  reconnect: <%= ENV['DATABASE_RECONNECT'] %>
   database: <%= ENV['DATABASE_NAME'] %>
   pool: <%= ENV['DATABASE_POOL'] %>
   username: <%= ENV['DATABASE_USERNAME'] %>
@@ -9,7 +9,7 @@ development:
   host: <%= ENV['DATABASE_HOST'] %>
   port: <%= ENV['DATABASE_PORT'] %>
 #  socket: <%= ENV['DATABASE_SOCKET'] %>
-  strict: false
+#  strict: false
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -17,28 +17,28 @@ development:
 test:
   adapter: <%= ENV['DATABASE_ADAPTER'] %>
   encoding: <%= ENV['DATABASE_ENCODING'] %>
-  reconnect: <%= ENV['DATABASE_RECONNECT'] %>
+#  reconnect: <%= ENV['DATABASE_RECONNECT'] %>
   database: <%= ENV['TEST_DATABASE_NAME'] %>
   pool: <%= ENV['DATABASE_POOL'] %>
   username: <%= ENV['DATABASE_USERNAME'] %>
   password:  <%= ENV['DATABASE_PASSWORD'] %>
-  socket: <%= ENV['DATABASE_SOCKET'] %>
+#  socket: <%= ENV['DATABASE_SOCKET'] %>
   host: <%= ENV['DATABASE_HOST'] %>
   port: <%= ENV['DATABASE_PORT'] %>
-  strict: false
+#  strict: false
 
 production:
   adapter: <%= ENV['DATABASE_ADAPTER'] %>
   encoding: <%= ENV['DATABASE_ENCODING'] %>
-  reconnect: <%= ENV['DATABASE_RECONNECT'] %>
+#  reconnect: <%= ENV['DATABASE_RECONNECT'] %>
   database: <%= ENV['DATABASE_NAME'] %>
   pool: <%= ENV['DATABASE_POOL'] %>
   username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
   host: <%= ENV['DATABASE_HOST'] %>
   port: <%= ENV['DATABASE_PORT'] %>
-  socket: <%= ENV['DATABASE_SOCKET'] %>
-  strict: false
+#  socket: <%= ENV['DATABASE_SOCKET'] %>
+#  strict: false
 
 
 #development:
