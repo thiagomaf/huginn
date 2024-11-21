@@ -1,6 +1,8 @@
 development:
   adapter: <%= ENV['DATABASE_ADAPTER'] %>
   encoding: <%= ENV['DATABASE_ENCODING'] %>
+#  adapter: postgresql
+#  encoding: unicode
 #  reconnect: <%= ENV['DATABASE_RECONNECT'] %>
   database: <%= ENV['DATABASE_NAME'] %>
   pool: <%= ENV['DATABASE_POOL'] %>
@@ -17,6 +19,8 @@ development:
 test:
   adapter: <%= ENV['DATABASE_ADAPTER'] %>
   encoding: <%= ENV['DATABASE_ENCODING'] %>
+#  adapter: postgresql
+#  encoding: unicode
 #  reconnect: <%= ENV['DATABASE_RECONNECT'] %>
   database: <%= ENV['TEST_DATABASE_NAME'] %>
   pool: <%= ENV['DATABASE_POOL'] %>
@@ -30,6 +34,8 @@ test:
 production:
   adapter: <%= ENV['DATABASE_ADAPTER'] %>
   encoding: <%= ENV['DATABASE_ENCODING'] %>
+#  adapter: postgresql
+#  encoding: unicode
 #  reconnect: <%= ENV['DATABASE_RECONNECT'] %>
   database: <%= ENV['DATABASE_NAME'] %>
   pool: <%= ENV['DATABASE_POOL'] %>
@@ -88,6 +94,6 @@ production:
 #  encoding: unicode
 #  database: <%= ENV['DATABASE_NAME'] %>
 #  pool: 5
-#  username: <%= ENV['DATABASE_USER'] %>
+#  username: <%= ENV['DATABASE_USERNAME'] %>
 #  password: <%= ENV['DATABASE_PASSWORD'] %>
 #  host: <%= ENV['DATABASE_HOST'] %>
