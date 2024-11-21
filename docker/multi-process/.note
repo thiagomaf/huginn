@@ -6,3 +6,14 @@ docker run --rm --name huginn \
 		-e DATABASE_HOST=dpg-csssq30gph6c7398nu00-a \
 		-e DATABASE_NAME=postgree_uuhx \
 		huginn/huginn
+
+
+POSTGRES_PORT_5432_TCP_ADDR=dpg-csssq30gph6c7398nu00-a
+POSTGRES_PASSWORD="0VquDHnXcxtj6Vbjod8l7KlRgTthujVg"
+POSTGRES_USER=postgree_uuhx_user
+HUGINN_DATABASE_PASSWORD="0VquDHnXcxtj6Vbjod8l7KlRgTthujVg"
+HUGINN_DATABASE_USERNAME=postgree_uuhx_user
+HUGINN_DATABASE_NAME=postgree_uuhx
+
+DO_NOT_SEED=aaa
+DO_NOT_CREATE_DATABASE=aaa
